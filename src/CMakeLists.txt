@@ -4,6 +4,25 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
+target_include_directories(${PROJECT_NAME} PRIVATE
+  components/
+  game/
+)
+
+target_sources(${PROJECT_NAME} PRIVATE
+  main.cpp
+  game/game.cpp
+  components/registry.cpp
+  components/sprite_component.cpp
+)
+
+target_sources(${PROJECT_NAME} PRIVATE
+  game/game.h
+  components/registry.h
+  components/sprite_component.h
+)
+
+
 target_link_libraries(${PROJECT_NAME} SDL3::SDL3)
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD

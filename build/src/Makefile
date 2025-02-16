@@ -129,6 +129,78 @@ paman/fast:
 	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/build
 .PHONY : paman/fast
 
+components/registry.obj: components/registry.cpp.obj
+.PHONY : components/registry.obj
+
+# target to build an object file
+components/registry.cpp.obj:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/components/registry.cpp.obj
+.PHONY : components/registry.cpp.obj
+
+components/registry.i: components/registry.cpp.i
+.PHONY : components/registry.i
+
+# target to preprocess a source file
+components/registry.cpp.i:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/components/registry.cpp.i
+.PHONY : components/registry.cpp.i
+
+components/registry.s: components/registry.cpp.s
+.PHONY : components/registry.s
+
+# target to generate assembly for a file
+components/registry.cpp.s:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/components/registry.cpp.s
+.PHONY : components/registry.cpp.s
+
+components/sprite_component.obj: components/sprite_component.cpp.obj
+.PHONY : components/sprite_component.obj
+
+# target to build an object file
+components/sprite_component.cpp.obj:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/components/sprite_component.cpp.obj
+.PHONY : components/sprite_component.cpp.obj
+
+components/sprite_component.i: components/sprite_component.cpp.i
+.PHONY : components/sprite_component.i
+
+# target to preprocess a source file
+components/sprite_component.cpp.i:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/components/sprite_component.cpp.i
+.PHONY : components/sprite_component.cpp.i
+
+components/sprite_component.s: components/sprite_component.cpp.s
+.PHONY : components/sprite_component.s
+
+# target to generate assembly for a file
+components/sprite_component.cpp.s:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/components/sprite_component.cpp.s
+.PHONY : components/sprite_component.cpp.s
+
+game/game.obj: game/game.cpp.obj
+.PHONY : game/game.obj
+
+# target to build an object file
+game/game.cpp.obj:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/game/game.cpp.obj
+.PHONY : game/game.cpp.obj
+
+game/game.i: game/game.cpp.i
+.PHONY : game/game.i
+
+# target to preprocess a source file
+game/game.cpp.i:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/game/game.cpp.i
+.PHONY : game/game.cpp.i
+
+game/game.s: game/game.cpp.s
+.PHONY : game/game.s
+
+# target to generate assembly for a file
+game/game.cpp.s:
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/game/game.cpp.s
+.PHONY : game/game.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -162,6 +234,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... paman
+	@echo ... components/registry.obj
+	@echo ... components/registry.i
+	@echo ... components/registry.s
+	@echo ... components/sprite_component.obj
+	@echo ... components/sprite_component.i
+	@echo ... components/sprite_component.s
+	@echo ... game/game.obj
+	@echo ... game/game.i
+	@echo ... game/game.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

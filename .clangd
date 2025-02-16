@@ -1,3 +1,4 @@
 CompileFlags:
   Add:
     - "-IC:/SDL/include"
+    - "-Isrc/"

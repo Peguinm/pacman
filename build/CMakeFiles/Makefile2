@@ -95,12 +95,12 @@ src/clean: src/CMakeFiles/paman.dir/clean
 src/CMakeFiles/paman.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\paman.dir\build.make src/CMakeFiles/paman.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles --progress-num=1,2 "Built target paman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles --progress-num=1,2,3,4,5 "Built target paman"
 .PHONY : src/CMakeFiles/paman.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/paman.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/paman.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles 0
 .PHONY : src/CMakeFiles/paman.dir/rule

@@ -1,5 +1,6 @@
-src/CMakeFiles/paman.dir/main.cpp.obj: \
-  C:/Users/maboz/Documents/minhas_coisas/Programacao/paman/src/main.cpp \
+src/CMakeFiles/paman.dir/game/game.cpp.obj: \
+  C:/Users/maboz/Documents/minhas_coisas/Programacao/paman/src/game/game.cpp \
+  C:/Users/maboz/Documents/minhas_coisas/Programacao/paman/src/game/game.h \
   C:/SDL/include/SDL3/SDL.h C:/SDL/include/SDL3/SDL_assert.h \
   C:/SDL/include/SDL3/SDL_stdinc.h \
   C:/SDL/include/SDL3/SDL_platform_defines.h \
@@ -56,7 +57,6 @@ src/CMakeFiles/paman.dir/main.cpp.obj: \
   C:/SDL/include/SDL3/SDL_system.h C:/SDL/include/SDL3/SDL_time.h \
   C:/SDL/include/SDL3/SDL_timer.h C:/SDL/include/SDL3/SDL_tray.h \
   C:/SDL/include/SDL3/SDL_version.h \
-  C:/Users/maboz/Documents/minhas_coisas/Programacao/paman/src/game/game.h \
   C:/mingw64/include/c++/13.1.0/cstddef \
   C:/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/os_defines.h \

@@ -83,20 +83,71 @@ src/CMakeFiles/paman.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paman.dir/main.cpp.s"
 	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\main.cpp -o CMakeFiles\paman.dir\main.cpp.s
 
+src/CMakeFiles/paman.dir/game/game.cpp.obj: src/CMakeFiles/paman.dir/flags.make
+src/CMakeFiles/paman.dir/game/game.cpp.obj: src/CMakeFiles/paman.dir/includes_CXX.rsp
+src/CMakeFiles/paman.dir/game/game.cpp.obj: C:/Users/maboz/Documents/minhas_coisas/Programacao/paman/src/game/game.cpp
+src/CMakeFiles/paman.dir/game/game.cpp.obj: src/CMakeFiles/paman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/paman.dir/game/game.cpp.obj"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/paman.dir/game/game.cpp.obj -MF CMakeFiles\paman.dir\game\game.cpp.obj.d -o CMakeFiles\paman.dir\game\game.cpp.obj -c C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\game\game.cpp
+
+src/CMakeFiles/paman.dir/game/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paman.dir/game/game.cpp.i"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\game\game.cpp > CMakeFiles\paman.dir\game\game.cpp.i
+
+src/CMakeFiles/paman.dir/game/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paman.dir/game/game.cpp.s"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\game\game.cpp -o CMakeFiles\paman.dir\game\game.cpp.s
+
+src/CMakeFiles/paman.dir/components/registry.cpp.obj: src/CMakeFiles/paman.dir/flags.make
+src/CMakeFiles/paman.dir/components/registry.cpp.obj: src/CMakeFiles/paman.dir/includes_CXX.rsp
+src/CMakeFiles/paman.dir/components/registry.cpp.obj: C:/Users/maboz/Documents/minhas_coisas/Programacao/paman/src/components/registry.cpp
+src/CMakeFiles/paman.dir/components/registry.cpp.obj: src/CMakeFiles/paman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/paman.dir/components/registry.cpp.obj"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/paman.dir/components/registry.cpp.obj -MF CMakeFiles\paman.dir\components\registry.cpp.obj.d -o CMakeFiles\paman.dir\components\registry.cpp.obj -c C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\components\registry.cpp
+
+src/CMakeFiles/paman.dir/components/registry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paman.dir/components/registry.cpp.i"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\components\registry.cpp > CMakeFiles\paman.dir\components\registry.cpp.i
+
+src/CMakeFiles/paman.dir/components/registry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paman.dir/components/registry.cpp.s"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\components\registry.cpp -o CMakeFiles\paman.dir\components\registry.cpp.s
+
+src/CMakeFiles/paman.dir/components/sprite_component.cpp.obj: src/CMakeFiles/paman.dir/flags.make
+src/CMakeFiles/paman.dir/components/sprite_component.cpp.obj: src/CMakeFiles/paman.dir/includes_CXX.rsp
+src/CMakeFiles/paman.dir/components/sprite_component.cpp.obj: C:/Users/maboz/Documents/minhas_coisas/Programacao/paman/src/components/sprite_component.cpp
+src/CMakeFiles/paman.dir/components/sprite_component.cpp.obj: src/CMakeFiles/paman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/paman.dir/components/sprite_component.cpp.obj"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/paman.dir/components/sprite_component.cpp.obj -MF CMakeFiles\paman.dir\components\sprite_component.cpp.obj.d -o CMakeFiles\paman.dir\components\sprite_component.cpp.obj -c C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\components\sprite_component.cpp
+
+src/CMakeFiles/paman.dir/components/sprite_component.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paman.dir/components/sprite_component.cpp.i"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\components\sprite_component.cpp > CMakeFiles\paman.dir\components\sprite_component.cpp.i
+
+src/CMakeFiles/paman.dir/components/sprite_component.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paman.dir/components/sprite_component.cpp.s"
+	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\src\components\sprite_component.cpp -o CMakeFiles\paman.dir\components\sprite_component.cpp.s
+
 # Object files for target paman
 paman_OBJECTS = \
-"CMakeFiles/paman.dir/main.cpp.obj"
+"CMakeFiles/paman.dir/main.cpp.obj" \
+"CMakeFiles/paman.dir/game/game.cpp.obj" \
+"CMakeFiles/paman.dir/components/registry.cpp.obj" \
+"CMakeFiles/paman.dir/components/sprite_component.cpp.obj"
 
 # External object files for target paman
 paman_EXTERNAL_OBJECTS =
 
 bin/paman.exe: src/CMakeFiles/paman.dir/main.cpp.obj
+bin/paman.exe: src/CMakeFiles/paman.dir/game/game.cpp.obj
+bin/paman.exe: src/CMakeFiles/paman.dir/components/registry.cpp.obj
+bin/paman.exe: src/CMakeFiles/paman.dir/components/sprite_component.cpp.obj
 bin/paman.exe: src/CMakeFiles/paman.dir/build.make
 bin/paman.exe: C:/SDL/lib/SDL3.lib
 bin/paman.exe: src/CMakeFiles/paman.dir/linkLibs.rsp
 bin/paman.exe: src/CMakeFiles/paman.dir/objects1.rsp
 bin/paman.exe: src/CMakeFiles/paman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ..\bin\paman.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ..\bin\paman.exe"
 	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\paman.dir\link.txt --verbose=$(VERBOSE)
 	cd /d C:\Users\maboz\Documents\minhas_coisas\Programacao\paman\build\src && C:\mingw64\bin\cmake.exe -E copy -t C:/Users/maboz/Documents/minhas_coisas/Programacao/paman/build/bin C:/SDL/bin/SDL3.dll
 
