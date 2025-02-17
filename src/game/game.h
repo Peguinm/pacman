@@ -7,12 +7,11 @@
 #include <memory>
 #include <string>
 
-
-namespace pm {
+namespace Engine {
 class Game
 {
   public:
-    Game(std::size_t windowWidth, std::size_t windowHeight);
+    Game(ECS::Registry &registry, std::size_t windowWidth, std::size_t windowHeight);
     ~Game();
 
     bool isRunning();
@@ -25,7 +24,7 @@ class Game
     SDL_Window *m_window;
     SDL_Renderer *m_renderer;
 
-    std::unique_ptr<ecs::Registry> m_registry;
+    ECS::Registry &m_registry;
 
     bool m_isRunning;
 

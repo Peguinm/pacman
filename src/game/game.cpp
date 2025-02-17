@@ -1,12 +1,18 @@
 #include "game.h"
 #include "SDL3/SDL.h"
+#include "SDL3/SDL_stdinc.h"
+#include "entity.h"
 #include "registry.h"
 #include <cstddef>
 #include <iostream>
 #include <memory>
+#include <utility>
 
-pm::Game::Game(std::size_t windowWidth, std::size_t windowHeight)
-  : m_isRunning(false)
+Engine::Game::Game(ECS::Registry &registry,
+                   std::size_t windowWidth,
+                   std::size_t windowHeight) // Passar por referência
+  : m_registry(registry)
+  , m_isRunning(false)
   , m_windowWidth(windowWidth)
   , m_windowHeight(windowHeight)
   , m_windowName("paman")
@@ -25,12 +31,10 @@ pm::Game::Game(std::size_t windowWidth, std::size_t windowHeight)
         return;
     }
 
-    m_registry = std::unique_ptr<ecs::Registry>(new ecs::Registry);
-
     m_isRunning = true;
 }
 
-pm::Game::~Game()
+Engine::Game::~Game()
 {
     SDL_DestroyWindow(m_window);
     SDL_DestroyRenderer(m_renderer);
@@ -38,13 +42,13 @@ pm::Game::~Game()
 }
 
 bool
-pm::Game::isRunning()
+Engine::Game::isRunning()
 {
     return m_isRunning;
 }
 
 void
-pm::Game::run()
+Engine::Game::run()
 {
     while (m_isRunning) {
         readInput();
@@ -54,7 +58,7 @@ pm::Game::run()
 }
 
 void
-pm::Game::readInput()
+Engine::Game::readInput()
 {
     SDL_Event event;
 
@@ -68,11 +72,16 @@ pm::Game::readInput()
 }
 
 void
-pm::Game::render()
+Engine::Game::render()
 {
 }
 
 void
-pm::Game::update()
+Engine::Game::update()
 {
+    for (auto &e : m_registry.entityRegistry) {
+        Entity *entity = e.second.get();
+
+        std::cout << entity->id << std::endl;
+    }
 }

@@ -13,12 +13,14 @@ target_sources(${PROJECT_NAME} PRIVATE
   main.cpp
   game/game.cpp
   components/registry.cpp
+  components/entity.cpp
   components/sprite_component.cpp
 )
 
 target_sources(${PROJECT_NAME} PRIVATE
   game/game.h
   components/registry.h
+  components/entity.h
   components/sprite_component.h
 )
 

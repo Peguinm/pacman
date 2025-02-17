@@ -1,1 +1,3 @@
 ## PACMAN
+
+pacman clone
