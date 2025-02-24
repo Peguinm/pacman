@@ -8,53 +8,50 @@
 #include <memory>
 #include <utility>
 
-Engine::Game::Game(ECS::Registry &registry,
-                   std::size_t windowWidth,
-                   std::size_t windowHeight) // Passar por referência
-  : m_registry(registry)
-  , m_isRunning(false)
-  , m_windowWidth(windowWidth)
-  , m_windowHeight(windowHeight)
+const Uint32 WINDOW_WIDTH = 400;
+const Uint32 WINDOW_HEIGHT = 400;
+
+Engine::Game *Engine::Game::m_instance = nullptr;
+
+Engine::Game::Game()
+  : m_isRunning(false)
+  , m_windowWidth(WINDOW_WIDTH)
+  , m_windowHeight(WINDOW_HEIGHT)
   , m_windowName("paman")
 {
+}
+
+void
+Engine::Game::init()
+{
+    if (!SDL_Init(SDL_INIT_VIDEO)) {
+        std::cout << "ERROR::SDL::FAILED_TO_INIT_VIDEO_SUBMODULE: " << SDL_GetError() << std::endl;
+        return;
+    }
+
     m_window = SDL_CreateWindow(m_windowName.c_str(), m_windowWidth, m_windowHeight, 0);
     if (m_window == nullptr) {
-        std::cout << "ERROR::GAME::COULD_NOT_CREATE_WINDOW: " << SDL_GetError();
+        std::cout << "ERROR::GAME::COULD_NOT_CREATE_WINDOW: " << SDL_GetError() << std::endl;
         m_isRunning = false;
         return;
     }
 
     m_renderer = SDL_CreateRenderer(m_window, 0);
     if (m_renderer == nullptr) {
-        std::cout << "ERROR::GAME::COULD_NOT_CREATE_RENDERER: " << SDL_GetError();
+        std::cout << "ERROR::GAME::COULD_NOT_CREATE_RENDERER: " << SDL_GetError() << std::endl;
         m_isRunning = false;
         return;
     }
 
-    m_isRunning = true;
-}
+    m_registry = std::make_unique<ECS::Registry>();
 
-Engine::Game::~Game()
-{
-    SDL_DestroyWindow(m_window);
-    SDL_DestroyRenderer(m_renderer);
-    SDL_Quit();
+    m_isRunning = true;
 }
 
 bool
 Engine::Game::isRunning()
 {
     return m_isRunning;
-}
-
-void
-Engine::Game::run()
-{
-    while (m_isRunning) {
-        readInput();
-        update();
-        render();
-    }
 }
 
 void
@@ -76,12 +73,28 @@ Engine::Game::render()
 {
 }
 
+ECS::Registry *
+Engine::Game::getRegistry()
+{
+    return m_registry.get();
+}
+
 void
 Engine::Game::update()
 {
-    for (auto &e : m_registry.entityRegistry) {
+    for (auto &e : getRegistry()->entityRegistry) {
         Entity *entity = e.second.get();
 
         std::cout << entity->id << std::endl;
     }
+}
+
+void
+Engine::Game::clean()
+{
+    SDL_DestroyWindow(m_window);
+    SDL_DestroyRenderer(m_renderer);
+    SDL_Quit();
+
+    delete m_instance;
 }

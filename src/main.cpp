@@ -1,7 +1,9 @@
 #include "SDL3/SDL.h"
-#include "SDL3/SDL_init.h"
-#include "game/game.h"
+#include "SDL3/SDL_stdinc.h"
+#include "entity.h"
+#include "game.h"
 #include "registry.h"
+#include <cstddef>
 #include <cstdlib>
 #include <iostream>
 
@@ -10,24 +12,23 @@
 int
 main(int argc, char **argv)
 {
+    Engine::Game::getInstance()->init();
 
-    
-
-    if (!SDL_Init(SDL_INIT_VIDEO)) {
-        std::cout << "ERROR::SDL::FAILED_TO_INIT_VIDEO_SUBMODULE";
+    ECS::Registry *registry = Engine::Game::getInstance()->getRegistry();
+    if (registry == nullptr) {
+        std::cout << "ERROR::GAME::REGISTRY_NOT_INITIALIZED" << std::endl;
         return EXIT_FAILURE;
     }
 
-    const std::size_t window_width = 400;
-    const std::size_t window_height = 400;
+    Entity *pacman = registry->createEntity();
 
-    ECS::Registry registry;
+    while (Engine::Game::getInstance()->isRunning()) {
+        Engine::Game::getInstance()->readInput();
+        Engine::Game::getInstance()->update();
+        Engine::Game::getInstance()->render();
+    }
 
-    Entity *pacman = registry.createEntity();
-
-    Engine::Game game(registry, window_width, window_height);
-
-    game.run();
+    Engine::Game::getInstance()->clean();
 
     return 0;
 }
