@@ -5,15 +5,20 @@
 #include "sprite_component.h"
 #include <memory>
 
+namespace ECS {
+class Registry;
+}
+
 class Entity
 {
   public:
-    Entity(Uint64 id);
+    Entity(Uint64 id, ECS::Registry *registry);
     ~Entity();
     Uint64 id;
 
   private:
     Entity();
+    ECS::Registry *m_registry;
 };
 
 #endif

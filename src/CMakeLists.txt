@@ -18,6 +18,7 @@ target_sources(${PROJECT_NAME} PRIVATE
 )
 
 target_sources(${PROJECT_NAME} PRIVATE
+  main.h
   game/game.h
   components/registry.h
   components/entity.h

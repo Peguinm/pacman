@@ -1,13 +1,4 @@
-#include "SDL3/SDL.h"
-#include "SDL3/SDL_stdinc.h"
-#include "entity.h"
-#include "game.h"
-#include "registry.h"
-#include <cstddef>
-#include <cstdlib>
-#include <iostream>
-
-// TODO usar o cscope
+#include "main.h"
 
 int
 main(int argc, char **argv)

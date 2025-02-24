@@ -1,8 +1,6 @@
 #include "game.h"
 #include "SDL3/SDL.h"
 #include "SDL3/SDL_stdinc.h"
-#include "entity.h"
-#include "registry.h"
 #include <cstddef>
 #include <iostream>
 #include <memory>
@@ -85,7 +83,7 @@ Engine::Game::update()
     for (auto &e : getRegistry()->entityRegistry) {
         Entity *entity = e.second.get();
 
-        std::cout << entity->id << std::endl;
+        // std::cout << entity->id << std::endl;
     }
 }
 

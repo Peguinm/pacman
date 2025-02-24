@@ -6,7 +6,7 @@ Entity *
 ECS::Registry::createEntity()
 {
     ++entities;
-    entityRegistry[entities] = std::make_unique<Entity>(entities);
+    entityRegistry[entities] = std::make_unique<Entity>(entities, this);
     return entityRegistry[entities].get();
 }
 
