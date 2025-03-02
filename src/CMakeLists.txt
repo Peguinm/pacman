@@ -7,6 +7,7 @@ add_executable(${PROJECT_NAME} main.cpp)
 target_include_directories(${PROJECT_NAME} PRIVATE
   components/
   game/
+  pacman/
 )
 
 target_sources(${PROJECT_NAME} PRIVATE
@@ -15,6 +16,7 @@ target_sources(${PROJECT_NAME} PRIVATE
   components/registry.cpp
   components/entity.cpp
   components/sprite_component.cpp
+  pacman/pacman.h
 )
 
 target_sources(${PROJECT_NAME} PRIVATE
@@ -23,6 +25,7 @@ target_sources(${PROJECT_NAME} PRIVATE
   components/registry.h
   components/entity.h
   components/sprite_component.h
+  pacman/pacman.cpp
 )
 
 

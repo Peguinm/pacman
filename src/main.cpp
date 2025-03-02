@@ -1,4 +1,5 @@
 #include "main.h"
+#include "pacman.h"
 
 int
 main(int argc, char **argv)
@@ -11,7 +12,8 @@ main(int argc, char **argv)
         return EXIT_FAILURE;
     }
 
-    Entity *pacman = registry->createEntity();
+    Entity *random = registry->createEntity<Entity>();
+    Entity *pacman = registry->createEntity<Pacman>();
 
     while (Engine::Game::getInstance()->isRunning()) {
         Engine::Game::getInstance()->readInput();

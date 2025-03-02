@@ -16,7 +16,16 @@ class Registry
     Registry(){};
     ~Registry(){};
 
-    Entity *createEntity();
+    template<typename T>
+    Entity *createEntity()
+    {
+        static_assert(std::is_base_of<Entity, T>().value);
+
+        ++entities;
+        entityRegistry[entities] = std::make_unique<T>(entities, this);
+        return entityRegistry[entities].get();
+    }
+
     SpriteComponent *createSpriteComponent();
 
     Uint64 entities = 0;

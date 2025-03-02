@@ -13,8 +13,11 @@ class Entity
 {
   public:
     Entity(Uint64 id, ECS::Registry *registry);
-    ~Entity();
+    virtual ~Entity();
     Uint64 id;
+
+    virtual void update(){};
+    virtual void draw(){};
 
   private:
     Entity();

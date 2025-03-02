@@ -83,7 +83,8 @@ Engine::Game::update()
     for (auto &e : getRegistry()->entityRegistry) {
         Entity *entity = e.second.get();
 
-        // std::cout << entity->id << std::endl;
+        std::cout << "ID: " + std::to_string(entity->id) << std::endl;
+        entity->update();
     }
 }
 
