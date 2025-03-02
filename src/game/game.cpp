@@ -15,7 +15,7 @@ Engine::Game::Game()
   : m_isRunning(false)
   , m_windowWidth(WINDOW_WIDTH)
   , m_windowHeight(WINDOW_HEIGHT)
-  , m_windowName("paman")
+  , m_windowName("pacman")
 {
 }
 
