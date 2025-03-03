@@ -1,22 +1,40 @@
 #include "pacman.h"
-#include "SDL3/SDL_stdinc.h"
+#include "SDL3/SDL.h"
+#include "SDL3_ttf/SDL_ttf.h"
 #include "entity.h"
+#include "sprite_component.h"
 
+#include <cstddef>
 #include <iostream>
 
 Pacman::Pacman(Uint64 id, ECS::Registry *registry)
-  : Pacman::Entity(id, registry)
+  : Entity(id, registry)
+  , sprite(NULL)
+{
+    sprite = registry->createSpriteComponent();
+}
+
+void
+Pacman::update(SDL_Time deltaTime)
 {
 }
 
 void
-Pacman::update()
+Pacman::draw(SDL_Renderer *renderer)
 {
-    std::cout << "Sou a porra do pacman" << std::endl;
-}
+    std::cout << SDL_GetError() << std::endl;
+    SDL_FRect rect = {
+        .x = 0,
+        .y = 0,
+        .w = 30,
+        .h = 30,
+    };
 
-void
-Pacman::draw()
-{
-    std::cout << "Sou a porra do pacman" << std::endl;
+    SDL_RenderFillRect(renderer, &rect);
+
+    TTF_Init();
+
+    
+
+    TTF_Quit();
 }

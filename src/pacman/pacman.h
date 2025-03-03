@@ -1,8 +1,10 @@
 #ifndef _PACMAN_H
 #define _PACMAN_H
 
-#include "SDL3/SDL_stdinc.h"
+#include "SDL3/SDL.h"
 #include "entity.h"
+#include "registry.h"
+#include "sprite_component.h"
 #include <cstdint>
 
 class Pacman : public Entity
@@ -10,8 +12,10 @@ class Pacman : public Entity
   public:
     Pacman(Uint64 id, ECS::Registry *registry);
 
-    void update() override;
-    void draw() override;
+    ECS::SpriteComponent *sprite;
+
+    void update(SDL_Time deltaTime) override;
+    void draw(SDL_Renderer *renderer) override;
 };
 
 #endif

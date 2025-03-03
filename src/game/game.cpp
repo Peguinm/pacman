@@ -1,6 +1,6 @@
 #include "game.h"
 #include "SDL3/SDL.h"
-#include "SDL3/SDL_stdinc.h"
+#include "entity.h"
 #include <cstddef>
 #include <iostream>
 #include <memory>
@@ -15,6 +15,7 @@ Engine::Game::Game()
   : m_isRunning(false)
   , m_windowWidth(WINDOW_WIDTH)
   , m_windowHeight(WINDOW_HEIGHT)
+  , m_time(std::make_unique<Time>())
   , m_windowName("pacman")
 {
 }
@@ -47,7 +48,7 @@ Engine::Game::init()
 }
 
 bool
-Engine::Game::isRunning()
+Engine::Game::isRunning() const
 {
     return m_isRunning;
 }
@@ -69,22 +70,32 @@ Engine::Game::readInput()
 void
 Engine::Game::render()
 {
+    for (auto &e : getRegistry()->entityRegistry) {
+        Entity *entity = e.second.get();
+        entity->draw(m_renderer);
+    }
+
+    SDL_RenderPresent(m_renderer);
 }
 
 ECS::Registry *
-Engine::Game::getRegistry()
+Engine::Game::getRegistry() const
 {
     return m_registry.get();
 }
 
+Time *
+Engine::Game::getTime() const
+{
+    return m_time.get();
+}
+
 void
-Engine::Game::update()
+Engine::Game::update(SDL_Time deltaTime)
 {
     for (auto &e : getRegistry()->entityRegistry) {
         Entity *entity = e.second.get();
-
-        std::cout << "ID: " + std::to_string(entity->id) << std::endl;
-        entity->update();
+        entity->update(deltaTime);
     }
 }
 

@@ -1,13 +1,14 @@
 #ifndef _REGISTRY_H
 #define _REGISTRY_H
 
-#include "SDL3/SDL_stdinc.h"
-#include "entity.h"
+#include "SDL3/SDL.h"
 #include "sprite_component.h"
 #include <algorithm>
 #include <cstdint>
 #include <memory>
 #include <unordered_map>
+
+class Entity;
 
 namespace ECS {
 class Registry

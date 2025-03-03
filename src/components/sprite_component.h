@@ -1,7 +1,7 @@
 #ifndef _SPRITE_COMPONENT_H
 #define _SPRITE_COMPONENT_H
 
-#include "SDL3/SDL_stdinc.h"
+#include "SDL3/SDL.h"
 
 namespace ECS {
 class SpriteComponent
